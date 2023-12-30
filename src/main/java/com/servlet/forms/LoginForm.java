@@ -9,6 +9,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/loginForm")
 public class LoginForm extends HttpServlet{
@@ -56,7 +57,10 @@ public class LoginForm extends HttpServlet{
 		
 		if(name.equalsIgnoreCase("Test") || password.equalsIgnoreCase("tesT"))
 		{
-			req.setAttribute("name_key", "Test");
+			HttpSession session = req.getSession();
+						session.setAttribute("name_key", "Test");
+						
+//			req.setAttribute("name_key", "Test");
 			RequestDispatcher rd = req.getRequestDispatcher("/profile.jsp");
 			rd.forward(req, resp);
 		}
