@@ -11,5 +11,8 @@
 		String name = (String) request.getAttribute("name_key");
 	%>
 		<h2> Welcome :<%= name %> </h2>
+		
+		<a href="home.jsp">Home</a> &nbsp;&nbsp;
+		<a href="about.jsp">About Us</a>
 	</body>
 </html>

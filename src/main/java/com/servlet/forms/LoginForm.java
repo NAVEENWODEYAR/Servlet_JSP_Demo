@@ -57,7 +57,6 @@ public class LoginForm extends HttpServlet{
 		if(name.equalsIgnoreCase("Test") || password.equalsIgnoreCase("tesT"))
 		{
 			req.setAttribute("name_key", "Test");
-			
 			RequestDispatcher rd = req.getRequestDispatcher("/profile.jsp");
 			rd.forward(req, resp);
 		}
