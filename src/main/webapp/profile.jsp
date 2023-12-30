@@ -7,6 +7,9 @@
 <title>Profile Page</title>
 </head>
 	<body>
-		<h2> Welcome to Jakarta Server Pages!</h2>
+	<%
+		String name = (String) request.getAttribute("name_key");
+	%>
+		<h2> Welcome :<%= name %> </h2>
 	</body>
 </html>

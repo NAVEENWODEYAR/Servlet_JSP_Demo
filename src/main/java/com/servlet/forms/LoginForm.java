@@ -52,15 +52,23 @@ public class LoginForm extends HttpServlet{
 		String name = req.getParameter("name");
 		String password = req.getParameter("password");
 			
+		PrintWriter pw = resp.getWriter();
+		
 		if(name.equalsIgnoreCase("Test") || password.equalsIgnoreCase("tesT"))
 		{
+			req.setAttribute("name_key", "Test");
+			
 			RequestDispatcher rd = req.getRequestDispatcher("/profile.jsp");
 			rd.forward(req, resp);
 		}
 		else
-		{
+		{	
+			resp.setContentType("text/html");
+			pw.write("<h1 style='color:red'>Idiot Credentials mismatched,</h1>");
 			RequestDispatcher rd = req.getRequestDispatcher("/index.html");
-			rd.forward(req, resp);
+//			rd.forward(req, resp);
+			rd.include(req, resp);
+			
 		}
 	}
 }
