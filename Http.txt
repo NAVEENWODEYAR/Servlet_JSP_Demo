@@ -1,0 +1,19 @@
+Commonly used Http Methods(verbs)
+	1. GET - 
+	2. POST - 
+	3. PUT -
+	4. DELETE -
+	5. PATCH -
+	
+
+	GET:
+		-data transfers through url.
+		- not secure.
+		- can be access simple data and is very fast.
+		- protected void doGet().
+		
+	POST:
+		- sensitive data(invisible in url), secure data transfer.
+		- transfers data in request body. 
+		- can access large data & slower compared to get.
+		- protected void doPost().
