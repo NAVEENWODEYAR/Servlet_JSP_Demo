@@ -13,6 +13,7 @@
 		<h2> Welcome :<%= name %> </h2>
 		
 		<a href="about.jsp">About Us</a> &nbsp;&nbsp;
-		<a href="profile.jsp">Profile</a>
+		<a href="profile.jsp">Profile</a>&nbsp;&nbsp;
+		<a href="logOut">LogOut</a>
 </body>
 </html>

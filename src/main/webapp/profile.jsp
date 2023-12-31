@@ -14,6 +14,6 @@
 		
 		<a href="home.jsp">Home</a> &nbsp;&nbsp;
 		<a href="about.jsp">About Us</a>&nbsp;&nbsp;
-		<a href="logOut.jsp">LogOut</a>
+		<a href="logOut">LogOut</a>
 	</body>
 </html>
